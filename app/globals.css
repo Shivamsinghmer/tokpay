@@ -1,26 +1,129 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* ─── Colors ─── */
+  --color-bg-primary:   #050816;
+  --color-bg-secondary: #0A1022;
+  --color-bg-card:      rgba(10,16,34,0.85);
+  --color-bg-deep:      #020B18;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-accent:        #3B5BFF;
+  --color-accent-glow:   rgba(59,91,255,0.20);
+  --color-accent-border: rgba(59,91,255,0.30);
+  --color-accent-soft:   rgba(59,91,255,0.10);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-text-primary:   #FFFFFF;
+  --color-text-secondary: #B8C0D9;
+  --color-text-muted:     #5A6480;
+
+  --color-border-subtle: rgba(255,255,255,0.06);
+  --color-border-card:   rgba(255,255,255,0.08);
+
+  /* ─── Font sizes ─── */
+  --text-hero: clamp(36px, 5vw, 64px);
+  --text-hero--line-height: 1.08;
+  --text-hero--letter-spacing: -0.02em;
+
+  --text-h2: clamp(24px, 3vw, 40px);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.01em;
+
+  --text-h3: clamp(16px, 1.5vw, 20px);
+  --text-h3--line-height: 1.35;
+
+  /* ─── Shadows ─── */
+  --shadow-glow:    0 0 40px rgba(59,91,255,0.15);
+  --shadow-glow-sm: 0 0 20px rgba(59,91,255,0.10);
+  --shadow-card:    0 4px 24px rgba(0,0,0,0.4);
+
+  /* ─── CSS animations (still used in SVGs and marquee) ─── */
+  --animate-marquee:   marquee 28s linear infinite;
+  --animate-dash-flow: dashFlow 2s linear infinite;
+
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes dashFlow {
+    0%   { stroke-dashoffset: 200; }
+    100% { stroke-dashoffset: 0; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Fonts reference next/font CSS vars set at runtime on <html> */
+@theme inline {
+  --font-display: var(--font-aldrich), sans-serif;
+  --font-body:    var(--font-inter), sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  *    { box-sizing: border-box; }
+}
+
+/*
+  Component layer — lower cascade priority than utilities.
+  This lets text-* and other utility classes override color/transform
+  set here (e.g. section-label text-text-secondary works correctly).
+*/
+@layer components {
+  .card-base {
+    background-color: rgba(10, 16, 34, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+
+  /*
+    card-hover only supplies the glow — framer-motion owns transforms
+    and border-color. No transform here avoids the double-move bug
+    when both card-hover and whileHover are applied to the same element.
+  */
+  .card-hover {
+    transition: box-shadow 250ms ease;
+  }
+  .card-hover:hover {
+    box-shadow: 0 0 40px rgba(59, 91, 255, 0.15);
+  }
+
+  /*
+    section-label in components so utility classes (text-text-secondary,
+    text-text-muted) can override the default accent color.
+  */
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #3B5BFF;
+  }
+}
+
+@layer utilities {
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #3B5BFF, #7B9FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Background patterns */
+  .bg-dot-grid {
+    background-image: radial-gradient(rgba(59, 91, 255, 0.15) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .bg-hero-glow {
+    background-image: radial-gradient(ellipse 70% 50% at 50% 110%, rgba(59, 91, 255, 0.15), transparent);
+  }
+  .bg-section-glow {
+    background-image: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(59, 91, 255, 0.10), transparent);
+  }
+  .bg-shimmer-bar {
+    background-image: linear-gradient(90deg, transparent 0%, rgba(59, 91, 255, 0.5) 50%, transparent 100%);
+  }
+  .bg-accent-text {
+    background-image: linear-gradient(135deg, #3B5BFF, #7B9FFF);
+  }
 }
