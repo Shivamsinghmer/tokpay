@@ -16,7 +16,7 @@ const item = {
 
 export default function UseCasesGrid() {
   return (
-    <section id="use-cases" className="bg-bg-secondary py-20 px-4">
+    <section id="use-cases" className="bg-bg-secondary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-12"

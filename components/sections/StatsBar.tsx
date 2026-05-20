@@ -15,7 +15,7 @@ function StatItem({ stat, index }: { stat: Stat; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.12, ease: 'easeOut' }}
     >
       <div className="flex items-baseline gap-1">
-        <span className="font-display font-extrabold text-4xl md:text-5xl text-white tracking-tight">
+        <span className="font-display font-extrabold text-3xl md:text-5xl text-white tracking-tight">
           {stat.prefix ?? ''}{count}{stat.suffix}
         </span>
         <motion.span
@@ -35,9 +35,9 @@ function StatItem({ stat, index }: { stat: Stat; index: number }) {
 
 export default function StatsBar() {
   return (
-    <section className="bg-bg-secondary border-y border-border-subtle py-10">
+    <section className="bg-bg-secondary border-y border-border-subtle py-8 md:py-10 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x divide-border-subtle">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4 md:gap-0 md:divide-x divide-border-subtle">
           {STATS.map((stat, i) => (
             <StatItem key={stat.label} stat={stat} index={i} />
           ))}

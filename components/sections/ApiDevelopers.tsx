@@ -16,7 +16,7 @@ const fadeItem = {
 
 export default function ApiDevelopers() {
   return (
-    <section id="developers" className="bg-bg-primary py-20 px-4">
+    <section id="developers" className="bg-bg-primary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -109,7 +109,7 @@ export default function ApiDevelopers() {
                 <span className="w-3 h-3 rounded-full bg-yellow-500 opacity-80" />
                 <span className="w-3 h-3 rounded-full bg-emerald-500 opacity-80" />
               </div>
-              <span className="text-xs font-mono text-text-muted">POST /v1/payments/initiate</span>
+              <span className="hidden sm:block text-xs font-mono text-text-muted">POST /v1/payments/initiate</span>
               <div />
             </div>
             {/* Code */}

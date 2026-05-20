@@ -229,10 +229,10 @@ export const DIGITAL_ASSETS: DigitalAsset[] = [
 ]
 
 export const DIGITAL_FEATURES: DigitalFeature[] = [
-  { icon: '💎', title: 'Stablecoin Wallets',    desc: 'Multi-asset custody with compliance-grade security and full audit trails.' },
-  { icon: '🔁', title: 'Instant Conversion',    desc: 'Convert between stablecoins and fiat in real time across corridors.' },
-  { icon: '🔐', title: 'Institutional Custody', desc: 'Secure digital asset storage with enterprise controls and insurance.' },
-  { icon: '⛓️', title: 'Multi-Chain Support',   desc: 'Operate across networks without building separate integrations.' },
+  { icon: '🔗', title: 'Embedded Asset Access',  desc: 'Enable customers to access digital assets through integrated infrastructure.' },
+  { icon: '💧', title: 'Liquidity Coordination', desc: 'Connect to institutional liquidity and settlement providers.' },
+  { icon: '🔐', title: 'Custody Infrastructure', desc: 'Coordinate secure asset custody and wallet operations.' },
+  { icon: '⚙️', title: 'Treasury Automation',    desc: 'Manage stablecoin treasury operations and payouts globally.' },
 ]
 
 // ─── UseCasesGrid ─────────────────────────────────────────
@@ -323,24 +323,24 @@ export const CODE_RESPONSE = `HTTP 200 OK
 
 export const COMPLIANCE_ROWS: ComplianceRow[] = [
   {
-    icon: '🔍',
-    title: 'AML & KYC Workflows',
-    desc: 'Automated screening and due diligence across all payment flows and counterparties.',
-  },
-  {
-    icon: '📊',
-    title: 'Regulatory Reporting',
-    desc: 'Structured compliance exports aligned to regional regulatory requirements and standards.',
-  },
-  {
-    icon: '🔔',
-    title: 'Transaction Monitoring',
-    desc: 'Real-time anomaly detection with configurable risk thresholds and escalation paths.',
+    icon: '🤝',
+    title: 'Regulated Infrastructure Partnerships',
+    desc: 'Built alongside regulated ecosystem providers across banking, custody, and settlement.',
   },
   {
     icon: '🔒',
-    title: 'Data Privacy & Security',
-    desc: 'Enterprise-grade encryption, data residency controls, and SOC 2 aligned infrastructure.',
+    title: 'Security & Operational Controls',
+    desc: 'Infrastructure designed with enterprise operational practices and security standards.',
+  },
+  {
+    icon: '🗺️',
+    title: 'Corridor-Based Compliance',
+    desc: 'Operations structured based on jurisdiction and corridor-specific regulatory requirements.',
+  },
+  {
+    icon: '🏛',
+    title: 'Institutional Infrastructure',
+    desc: 'Built for businesses, fintechs, exchanges, and enterprise use cases at scale.',
   },
 ]
 

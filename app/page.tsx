@@ -22,10 +22,10 @@ export default function Home() {
       <PaymentsInfra />
       <DigitalAssets />
       <UseCasesGrid />
-      <Corridors />
       <TreasuryLiquidity />
       <ApiDevelopers />
       <ComplianceSecurity />
+      <Corridors />
       <CtaFooter />
       <Footer />
     </main>

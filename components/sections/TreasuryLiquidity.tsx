@@ -8,7 +8,7 @@ import {
 
 export default function TreasuryLiquidity() {
   return (
-    <section id="treasury" className="bg-bg-secondary py-20 px-4">
+    <section id="treasury" className="bg-bg-secondary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* LEFT — features */}
         <motion.div
@@ -33,17 +33,17 @@ export default function TreasuryLiquidity() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            Treasury Infrastructure at Scale
+            Liquidity Infrastructure for Global Money Movement
           </motion.h2>
           <motion.p
-            className="text-text-secondary text-base leading-relaxed mb-8"
+            className="text-text-secondary text-base leading-relaxed mb-8 max-w-md"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Manage multi-currency treasury, access institutional liquidity, and connect to
-            settlement providers through a unified routing engine.
+            Coordinate liquidity, treasury balances, stablecoin settlement, and payout orchestration
+            across multiple jurisdictions and corridors.
           </motion.p>
 
           <div className="flex flex-col divide-y divide-border-subtle">

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FOOTER_LINKS, FOOTER_LOCATIONS } from '@/lib/constants'
 
 export default function Footer() {
@@ -8,9 +9,8 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-1 font-display font-bold text-xl text-white mb-4">
-              TokPay
-              <span className="w-1.5 h-1.5 rounded-sm bg-accent mb-3" />
+            <div className="mb-4">
+              <Image src="/logo.png" alt="TokPay" height={28} width={100} style={{ width: 'auto', height: '28px', objectFit: 'contain' }} />
             </div>
             <p className="text-text-muted text-sm leading-relaxed">
               Cross-border financial infrastructure.

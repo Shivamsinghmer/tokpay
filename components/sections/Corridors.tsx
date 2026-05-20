@@ -13,7 +13,7 @@ const CORRIDOR_NODES = [
 
 export default function Corridors() {
   return (
-    <section id="corridors" className="bg-bg-primary py-20 px-4">
+    <section id="corridors" className="bg-bg-primary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -53,7 +53,7 @@ export default function Corridors() {
 
         {/* Hub diagram */}
         <motion.div
-          className="card-base p-6 mb-8"
+          className="card-base p-4 sm:p-6 mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: '-80px' }}

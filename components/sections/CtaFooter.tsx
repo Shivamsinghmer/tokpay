@@ -4,7 +4,7 @@ import { FOOTER_LOCATIONS } from '@/lib/constants'
 
 export default function CtaFooter() {
   return (
-    <section id="cta" className="bg-bg-primary py-24 px-4 relative overflow-hidden">
+    <section id="cta" className="bg-bg-primary py-16 md:py-24 px-4 relative overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-section-glow pointer-events-none"
         animate={{ opacity: [0.5, 1, 0.5] }}

@@ -21,7 +21,7 @@ const badgeItem = {
 
 export default function ComplianceSecurity() {
   return (
-    <section id="compliance" className="bg-bg-secondary py-20 px-4">
+    <section id="compliance" className="bg-bg-secondary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -47,7 +47,7 @@ export default function ComplianceSecurity() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            Built for Regulatory Confidence
+            Enterprise-Grade Infrastructure & Operational Controls
           </motion.h2>
           <motion.p
             className="text-text-secondary text-base mt-4 max-w-md mx-auto leading-relaxed"
@@ -56,8 +56,8 @@ export default function ComplianceSecurity() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            TokPay embeds compliance directly into the payment and settlement layer,
-            so every transaction is screened, tracked, and reportable.
+            TokPay works with regulated infrastructure providers, banking partners, custody providers,
+            liquidity venues, and compliance systems to support secure financial operations.
           </motion.p>
         </motion.div>
 
@@ -80,28 +80,28 @@ export default function ComplianceSecurity() {
                 key={row.title}
                 variants={rowItem}
                 className={`
-                  flex items-center justify-between px-8 py-7 group cursor-default
+                  flex items-center justify-between px-4 sm:px-8 py-5 sm:py-7 group cursor-default
                   hover:bg-accent-soft transition-colors duration-200
                   ${i < COMPLIANCE_ROWS.length - 1 ? 'border-b border-border-subtle' : ''}
                 `}
                 whileHover={{ x: 4 }}
               >
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3 sm:gap-6">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-accent-soft border border-accent-border flex items-center justify-center text-xl shrink-0 group-hover:border-accent transition-colors"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-soft border border-accent-border flex items-center justify-center text-lg sm:text-xl shrink-0 group-hover:border-accent transition-colors"
                     whileHover={{ rotate: [0, -5, 5, -3, 0], transition: { duration: 0.3 } }}
                   >
                     {row.icon}
                   </motion.div>
                   <div>
-                    <h3 className="font-display font-semibold text-white text-lg mb-1 group-hover:text-accent transition-colors">
+                    <h3 className="font-display font-semibold text-white text-base sm:text-lg mb-1 group-hover:text-accent transition-colors">
                       {row.title}
                     </h3>
                     <p className="text-text-muted text-sm leading-relaxed max-w-lg">{row.desc}</p>
                   </div>
                 </div>
                 <motion.span
-                  className="text-text-muted group-hover:text-accent transition-colors text-xl ml-6 shrink-0"
+                  className="hidden sm:block text-text-muted group-hover:text-accent transition-colors text-xl ml-6 shrink-0"
                   whileHover={{ x: 4 }}
                 >
                   →

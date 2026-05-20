@@ -16,7 +16,7 @@ const staggerItem = {
 
 export default function DigitalAssets() {
   return (
-    <section id="digital-assets" className="bg-bg-primary py-20 px-4">
+    <section id="digital-assets" className="bg-bg-primary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -42,7 +42,7 @@ export default function DigitalAssets() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            Stablecoin & Digital Asset Infrastructure
+            Digital Asset Access & Liquidity Infrastructure
           </motion.h2>
           <motion.p
             className="text-text-secondary text-base mt-4 max-w-lg mx-auto leading-relaxed"
@@ -51,8 +51,8 @@ export default function DigitalAssets() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Manage multi-asset treasury, enable stablecoin settlement, and access institutional custody
-            through a single unified platform.
+            Enable compliant digital asset workflows, liquidity access, and custody coordination
+            through a modular infrastructure layer.
           </motion.p>
         </motion.div>
 
@@ -131,7 +131,7 @@ export default function DigitalAssets() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.15 }}
                 >
-                  <span className="w-12 text-xs text-text-muted font-mono shrink-0">{asset.name}</span>
+                  <span className="w-10 sm:w-12 text-xs text-text-muted font-mono shrink-0">{asset.name}</span>
                   <div className="flex-1 h-2 bg-border-subtle rounded-full overflow-hidden">
                     <motion.div
                       className="h-full rounded-full"

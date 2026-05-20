@@ -13,7 +13,7 @@ export default function PlatformOverview() {
   const tab = PLATFORM_TABS[active]
 
   return (
-    <section id="platform" className="bg-bg-primary py-20 px-4">
+    <section id="platform" className="bg-bg-primary py-14 md:py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -67,7 +67,7 @@ export default function PlatformOverview() {
               <motion.button
                 key={t.number}
                 onClick={() => setActive(i)}
-                className={`text-left px-6 py-5 rounded-xl border transition-colors duration-200 group ${
+                className={`text-left px-4 sm:px-6 py-4 sm:py-5 rounded-xl border transition-colors duration-200 group ${
                   active === i
                     ? 'border-accent-border bg-accent-soft'
                     : 'border-border-card bg-bg-card hover:border-border-card/50'
@@ -143,7 +143,7 @@ export default function PlatformOverview() {
                         transition={{ delay: i * 0.1, duration: 0.3 }}
                       >
                         <p className="text-text-muted text-xs mb-1">{m.label}</p>
-                        <p className="font-display font-bold text-xl text-white">{m.value}</p>
+                        <p className="font-display font-bold text-base sm:text-xl text-white">{m.value}</p>
                         {m.change && <p className={`text-xs mt-1 ${m.color}`}>{m.change}</p>}
                       </motion.div>
                     ))}
@@ -162,8 +162,8 @@ export default function PlatformOverview() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.08, duration: 0.3 }}
                       >
-                        <span className="text-sm font-body text-white">{tx.corridor}</span>
-                        <span className="text-sm font-mono text-text-secondary">{tx.amount}</span>
+                        <span className="text-xs sm:text-sm font-body text-white min-w-0 truncate max-w-[90px] sm:max-w-none">{tx.corridor}</span>
+                        <span className="text-xs sm:text-sm font-mono text-text-secondary shrink-0">{tx.amount}</span>
                         <span className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-full bg-black/30 border border-border-subtle">
                           <span className={`w-1.5 h-1.5 rounded-full ${tx.color}`} />
                           {tx.status}

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { NAV_LINKS } from '@/lib/constants'
 
 export default function Navbar() {
@@ -27,9 +28,8 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1 font-display font-bold text-xl text-white">
-          TokPay
-          <span className="w-1.5 h-1.5 rounded-sm bg-accent mb-3" />
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="TokPay" height={32} width={120} style={{ width: 'auto', height: '32px', objectFit: 'contain' }} priority />
         </Link>
 
         {/* Desktop nav */}
